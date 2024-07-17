@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/news_container_widget.dart';
-import 'container_widget.dart';
+import 'package:myapp/row_column/biodata.dart';
+import 'package:myapp/row_column/latihan_row_column.dart';
+import 'package:myapp/row_column/biodata.dart';
+import 'package:myapp/row_column/column_widget.dart';
+import 'package:myapp/row_column/latihan_row_column.dart';
+import 'package:myapp/row_column/row_column.dart';
+import 'package:myapp/row_column/row_widget.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -15,11 +21,12 @@ class MyApp extends StatelessWidget {
         home: Scaffold(
             backgroundColor: Colors.teal,
             appBar: AppBar(
-              title: Text('Belajar Flutter'),
+              title: const Text('Belajar Flutter'),
               centerTitle: true,
               backgroundColor: Colors.greenAccent,
             ),
-            body: NewsContainer(),
+            // ignore: prefer_const_constructors
+            body: Biodata(),
           ),
         );
   }
@@ -32,7 +39,7 @@ class TextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(
+    return const Center(
       child: Text(
         'Hello World',
         style: TextStyle(
